@@ -4,7 +4,13 @@
   "description": "Desktop notifications for Sentry",
   "main": "main.js",
   "scripts": {
+    "lint": "eslint -c .eslintrc .",
     "start": "electron ."
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint -c .eslintrc --fix"
+    ]
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -16,6 +22,10 @@
   "author": "Lucas Carvalho Teixeira",
   "license": "MIT",
   "devDependencies": {
-    "electron": "~1.6.2"
+    "babel-eslint": "^7.2.3",
+    "electron": "~1.6.2",
+    "eslint": "^4.6.1",
+    "eslint-plugin-jest": "^21.0.2",
+    "lint-staged": "^4.1.3"
   }
 }

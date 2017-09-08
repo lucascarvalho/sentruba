@@ -1,0 +1,12 @@
+language: node_js
+
+sudo: false
+
+env:
+  - TEST_TYPE=lint
+
+script:
+  - npm run $TEST_TYPE
+
+notifications:
+  email: false

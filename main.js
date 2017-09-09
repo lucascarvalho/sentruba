@@ -1,8 +1,6 @@
 const path = require('path')
 const url = require('url')
-const electron = require('electron')
-const {app} = electron
-const {BrowserWindow} = electron
+const {app, BrowserWindow} = require('electron')
 
 let mainWindow = null
 

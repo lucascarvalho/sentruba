@@ -4,25 +4,46 @@
     "es6": true,
     "node": true,
   },
-  "extends": ["eslint:all", "plugin:jest/recommended"],
+  "extends": ["eslint:all", "plugin:react/all", "plugin:jest/recommended"],
   "parser": "babel-eslint",
   "plugins": [
-    "jest"
+    "jest",
+    "react"
   ],
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
   "rules": {
+    "class-methods-use-this": ["error", {
+      "exceptMethods": [
+        "componentDidMount",
+        "componentDidUpdate",
+        "componentWillMount",
+        "componentWillReceiveProps",
+        "componentWillUnmount",
+        "componentWillUpdate",
+        "getChildContext",
+        "getDefaultProps",
+        "getInitialState",
+        "render",
+        "shouldComponentUpdate",
+      ],
+    }],
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
     "max-len": ["error", 120],
-    "no-magic-numbers": ["error", { "ignore": [0] }],
+    "no-magic-numbers": ["error", {"ignore": [0]}],
     "one-var": ["error", {"const": "never"}],
     "operator-linebreak": ["error", "after"],
-    "padded-blocks": ["error", {"blocks": "never", "classes": "always", "switches": "never" }],
+    "padded-blocks": ["error", {"blocks": "never", "classes": "always", "switches": "never"}],
     "quotes": ["error", "single"],
     "quote-props": ["error", "consistent-as-needed"],
+    "react/jsx-indent": ["error", 2],
+    "react/jsx-filename-extension": ["error", {"extensions": [".js", ".jsx"]}],
     "require-jsdoc": 0,
     "semi": ["error", "never"],
   },

@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "lint": "eslint -c .eslintrc .",
-    "start": "electron ."
+    "start": "electron -r babel-register ."
   },
   "lint-staged": {
     "*.js": [
@@ -23,6 +23,8 @@
   "license": "MIT",
   "devDependencies": {
     "babel-eslint": "^7.2.3",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.26.0",
     "electron": "~1.6.2",
     "eslint": "^4.6.1",
     "eslint-plugin-jest": "^21.0.2",

@@ -4,6 +4,7 @@
   "description": "Desktop notifications for Sentry",
   "main": "main.js",
   "scripts": {
+    "precommit": "lint-staged",
     "lint": "eslint -c .eslintrc .",
     "start": "electron -r babel-register ."
   },
@@ -28,6 +29,7 @@
     "electron": "~1.6.2",
     "eslint": "^4.6.1",
     "eslint-plugin-jest": "^21.0.2",
+    "husky": "^0.14.3",
     "lint-staged": "^4.1.3"
   }
 }

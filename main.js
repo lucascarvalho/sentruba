@@ -1,3 +1,4 @@
+/* eslint global-require: 0 */
 const path = require('path')
 const url = require('url')
 const {app, BrowserWindow} = require('electron')
@@ -28,6 +29,9 @@ const createWindow = () => {
   mainWindow.on('closed', () => {
     mainWindow = null
   })
+
+  require('./app/main-menu')
+  require('./app/main-tray-menu')
 }
 
 app.on('ready', createWindow)

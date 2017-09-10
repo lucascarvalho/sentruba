@@ -3,11 +3,21 @@ const url = require('url')
 const {app, BrowserWindow} = require('electron')
 
 let mainWindow = null
+const HEIGHT = 500
+const WIDTH = 500
 
 const createWindow = () => {
   mainWindow = new BrowserWindow({
-    height: 600,
-    width: 800
+    backgroundColor: '#F94E15',
+    center: true,
+    fullscreenable: false,
+    height: HEIGHT,
+    maxHeight: HEIGHT,
+    maxWidth: WIDTH,
+    maximizable: false,
+    minHeight: HEIGHT,
+    minWidth: WIDTH,
+    width: WIDTH
   })
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),

@@ -3,6 +3,11 @@ const path = require('path')
 const url = require('url')
 const {app, BrowserWindow} = require('electron')
 
+require('electron-reload')(__dirname, {
+  electron: path.join(__dirname, 'node_modules', '.bin', 'electron'),
+  hardResetMethod: 'exit'
+})
+
 let mainWindow = null
 const HEIGHT = 500
 const WIDTH = 500

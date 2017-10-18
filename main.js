@@ -3,10 +3,16 @@ const path = require('path')
 const url = require('url')
 const {app, BrowserWindow} = require('electron')
 
-require('electron-reload')(__dirname, {
-  electron: path.join(__dirname, 'node_modules', '.bin', 'electron'),
-  hardResetMethod: 'exit'
-})
+require('electron-reload')(
+  [
+    path.join(__dirname, 'main.js'),
+    path.join(__dirname, 'app')
+  ],
+  {
+    electron: path.join(__dirname, 'node_modules', '.bin', 'electron'),
+    hardResetMethod: 'exit'
+  }
+)
 
 let mainWindow = null
 const HEIGHT = 500
@@ -35,7 +41,7 @@ const createWindow = () => {
     mainWindow = null
   })
 
-  require('./app/main-menu')
+  // require('./app/main-menu')
   require('./app/main-tray-menu')
 }
 

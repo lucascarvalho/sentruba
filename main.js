@@ -41,7 +41,7 @@ const createWindow = () => {
     mainWindow = null
   })
 
-  // require('./app/main-menu')
+  require('./app/main-menu')
   require('./app/main-tray-menu')
 }
 

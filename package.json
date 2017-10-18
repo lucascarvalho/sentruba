@@ -6,7 +6,7 @@
   "scripts": {
     "precommit": "lint-staged",
     "lint": "eslint -c .eslintrc .",
-    "start": "electron -r babel-register .",
+    "start": "NODE_ENV=development electron -r babel-register .",
     "watch": "NODE_ENV=development node server.js"
   },
   "lint-staged": {

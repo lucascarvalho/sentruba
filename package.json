@@ -6,7 +6,7 @@
   "scripts": {
     "precommit": "lint-staged",
     "lint": "eslint -c .eslintrc .",
-    "start": "NODE_ENV=development electron -r babel-register .",
+    "start": "NODE_ENV=development electron -r @babel/register .",
     "watch": "NODE_ENV=development node server.js"
   },
   "lint-staged": {
@@ -24,13 +24,15 @@
   "author": "Lucas Carvalho Teixeira",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "7.0.0-beta.35",
+    "@babel/plugin-syntax-object-rest-spread": "7.0.0-beta.35",
+    "@babel/preset-env": "7.0.0-beta.35",
+    "@babel/preset-react": "7.0.0-beta.35",
+    "@babel/register": "7.0.0-beta.35",
     "babel-eslint": "8.0.3",
-    "babel-loader": "7.1.2",
-    "babel-preset-env": "1.6.1",
-    "babel-preset-react": "6.24.1",
-    "babel-register": "6.26.0",
+    "babel-loader": "8.0.0-beta.0",
     "css-loader": "0.28.7",
-    "electron": "1.7.9",
+    "electron": "1.7.10",
     "electron-reload": "1.2.2",
     "eslint": "4.13.1",
     "eslint-plugin-jest": "21.5.0",

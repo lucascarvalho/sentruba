@@ -1,10 +1,12 @@
 {
   "presets": [
-    ["env", {
+    ["@babel/preset-env", {
       "targets": {
-        "electon": "current"
-      }
+        "node": "current"
+      },
+      "debug": true
     }],
-    "react"
-  ]
+    "@babel/preset-react"
+  ],
+  "plugins": ["@babel/plugin-syntax-object-rest-spread"]
 }

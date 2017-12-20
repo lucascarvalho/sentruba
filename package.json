@@ -7,6 +7,7 @@
     "precommit": "lint-staged",
     "lint": "eslint -c .eslintrc .",
     "start": "NODE_ENV=development electron -r @babel/register .",
+    "test": "jest --verbose",
     "watch": "NODE_ENV=development node server.js"
   },
   "lint-staged": {
@@ -29,7 +30,9 @@
     "@babel/preset-env": "7.0.0-beta.35",
     "@babel/preset-react": "7.0.0-beta.35",
     "@babel/register": "7.0.0-beta.35",
+    "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "8.0.3",
+    "babel-jest": "22.0.3",
     "babel-loader": "8.0.0-beta.0",
     "css-loader": "0.28.7",
     "electron": "1.7.10",
@@ -38,11 +41,13 @@
     "eslint-plugin-jest": "21.5.0",
     "eslint-plugin-react": "7.5.1",
     "husky": "0.14.3",
+    "jest": "22.0.3",
     "lint-staged": "6.0.0",
     "node-sass": "4.7.2",
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-hot-loader": "3.1.3",
+    "regenerator-runtime": "0.11.1",
     "sass-loader": "6.0.6",
     "style-loader": "0.19.1",
     "webpack": "3.10.0",
@@ -55,5 +60,22 @@
     "react-router-redux": "5.0.0-alpha.9",
     "redux": "3.7.2",
     "redux-form": "7.2.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "timers": "fake",
+    "transformIgnorePatterns": [
+      "node_modules"
+    ],
+    "verbose": true
   }
 }

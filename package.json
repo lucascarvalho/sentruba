@@ -28,7 +28,7 @@
     "@babel/plugin-syntax-object-rest-spread": "7.0.0-beta.35",
     "@babel/preset-env": "7.0.0-beta.35",
     "@babel/preset-react": "7.0.0-beta.35",
-    "@babel/register": "7.0.0-beta.35",
+    "@babel/register": "7.0.0-beta.36",
     "babel-eslint": "8.0.3",
     "babel-loader": "8.0.0-beta.0",
     "css-loader": "0.28.7",

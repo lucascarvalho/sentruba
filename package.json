@@ -24,7 +24,7 @@
   "author": "Lucas Carvalho Teixeira",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "7.0.0-beta.35",
+    "@babel/core": "7.0.0-beta.36",
     "@babel/plugin-syntax-object-rest-spread": "7.0.0-beta.35",
     "@babel/preset-env": "7.0.0-beta.35",
     "@babel/preset-react": "7.0.0-beta.35",

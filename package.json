@@ -54,6 +54,6 @@
     "react-redux": "5.0.6",
     "react-router-redux": "5.0.0-alpha.9",
     "redux": "3.7.2",
-    "redux-form": "7.2.0"
+    "redux-form": "7.2.1"
   }
 }

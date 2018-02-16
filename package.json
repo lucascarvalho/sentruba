@@ -51,7 +51,7 @@
   "dependencies": {
     "history": "4.7.2",
     "prop-types": "15.6.0",
-    "react-redux": "5.0.6",
+    "react-redux": "5.0.7",
     "react-router-redux": "5.0.0-alpha.9",
     "redux": "3.7.2",
     "redux-form": "7.2.0"

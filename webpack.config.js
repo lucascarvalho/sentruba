@@ -65,14 +65,4 @@ const config = {
 
 }
 
-// console.log('process.env.NODE_ENV', process.env.NODE_ENV) // eslint-disable-line no-console
-// if (process.env.NODE_ENV === 'development') {
-//   config.entry.app.unshift(
-//     'webpack-dev-server/client?http://localhost:3000',
-//     'webpack/hot/only-dev-server',
-//     'react-hot-loader/patch'
-//   )
-//   config.plugins.push(new webpack.HotModuleReplacementPlugin())
-//   config.output.publicPath = 'http://localhost:3000/assets/bundles/'
-// }
 module.exports = config

@@ -1,7 +1,9 @@
+/* global console */
 /* eslint global-require: 0 */
 const path = require('path')
 const url = require('url')
 const {app, BrowserWindow} = require('electron')
+const {default: installExtension, REACT_DEVELOPER_TOOLS, REDUX_DEVTOOLS} = require('electron-devtools-installer')
 
 require('electron-reload')(
   [
@@ -45,7 +47,17 @@ const createWindow = () => {
   require('./app/main-tray-menu')
 }
 
-app.on('ready', createWindow)
+app.on('ready', () => {
+  installExtension(REACT_DEVELOPER_TOOLS).
+    then((name) => console.log(`Added Extension:  ${name}`)). // eslint-disable-line no-console
+    catch((err) => console.log('An error occurred: ', err)) // eslint-disable-line no-console
+
+  installExtension(REDUX_DEVTOOLS).
+    then((name) => console.log(`Added Extension:  ${name}`)). // eslint-disable-line no-console
+    catch((err) => console.log('An error occurred: ', err)) // eslint-disable-line no-console
+
+  createWindow()
+})
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {

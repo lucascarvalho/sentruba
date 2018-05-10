@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import {Provider} from 'react-redux'
 import React from 'react'
 import Welcome from './welcome'
+import {hot} from 'react-hot-loader'
 
 const Routes = ({store, history}) =>
   <Provider store={store}>
@@ -21,4 +22,5 @@ Routes.propTypes = {
   history: PropTypes.shape({}).isRequired,
   store: PropTypes.shape({}).isRequired
 }
-export default Routes
+
+export default hot(module)(Routes)

@@ -51,6 +51,7 @@ const config = {
   },
 
   plugins: [
+    new webpack.DefinePlugin({SENTRY_DSN: JSON.stringify(process.env.SENTRUBA_SENTRY_DSN)}),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ],

@@ -7,8 +7,7 @@
     "precommit": "lint-staged",
     "lint": "eslint -c .eslintrc .",
     "start:electron": "NODE_ENV=development electron -r @babel/register .",
-    "start:webpack": "NODE_ENV=development webpack --watch",
-    "start:server": "NODE_ENV=development webpack-dev-server",
+    "start:webpack": "NODE_ENV=development webpack-dev-server",
     "test": "jest --verbose"
   },
   "lint-staged": {

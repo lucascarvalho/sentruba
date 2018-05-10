@@ -45,6 +45,7 @@
     "quote-props": ["error", "consistent-as-needed"],
     "react/jsx-indent": ["error", 2],
     "react/jsx-indent-props": ["error", 2],
+    "react/jsx-max-depth": ["error", {"max": 4}],
     "react/jsx-wrap-multilines": [1, {"declaration": true, "assignment": true, "return": true, "arrow": false}],
     "react/jsx-filename-extension": ["error", {"extensions": [".js", ".jsx"]}],
     "require-jsdoc": 0,

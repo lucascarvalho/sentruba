@@ -2,7 +2,7 @@
 const {Tray} = require('electron')
 const path = require('path')
 const {platform} = process
-const imageFolder = path.join(__dirname, '/assets/images')
+const imageFolder = path.join(__dirname, 'assets/images')
 
 let trayImage = null
 if (platform === 'darwin') {

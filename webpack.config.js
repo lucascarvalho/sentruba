@@ -4,8 +4,19 @@ const path = require('path')
 const webpack = require('webpack')
 const rootAssetPath = './src'
 
+const mode = process.env.NODE_ENV || 'development'
+
 const config = {
+  devServer: {
+    compress: true,
+    contentBase: path.join(__dirname, 'dist'),
+    hot: true,
+    port: 3000
+  },
+
   entry: {app: [`${rootAssetPath}/index`]},
+
+  mode,
 
   module: {
     rules: [
@@ -35,12 +46,17 @@ const config = {
 
   output: {
     filename: 'sentruba.js',
-    path: path.resolve('./dist/')
+    path: path.resolve('./dist/'),
+    publicPath: 'http://localhost:3000/'
   },
 
-  plugins: [],
+  plugins: [
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin()
+  ],
 
   resolve: {
+    alias: {src: path.resolve('./src')},
     modules: [
       path.join(__dirname, 'src'),
       path.join(__dirname, 'node_modules')
@@ -49,14 +65,14 @@ const config = {
 
 }
 
-console.log('process.env.NODE_ENV', process.env.NODE_ENV) // eslint-disable-line no-console
-if (process.env.NODE_ENV === 'development') {
-  config.entry.app.unshift(
-    'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/only-dev-server',
-    'react-hot-loader/patch'
-  )
-  config.plugins.push(new webpack.HotModuleReplacementPlugin())
-  config.output.publicPath = 'http://localhost:3000/assets/bundles/'
-}
+// console.log('process.env.NODE_ENV', process.env.NODE_ENV) // eslint-disable-line no-console
+// if (process.env.NODE_ENV === 'development') {
+//   config.entry.app.unshift(
+//     'webpack-dev-server/client?http://localhost:3000',
+//     'webpack/hot/only-dev-server',
+//     'react-hot-loader/patch'
+//   )
+//   config.plugins.push(new webpack.HotModuleReplacementPlugin())
+//   config.output.publicPath = 'http://localhost:3000/assets/bundles/'
+// }
 module.exports = config

@@ -1,3 +1,4 @@
+import 'main.scss'
 import configureStore, {history} from './store'
 import React from 'react'
 import ReactDOM from 'react-dom'

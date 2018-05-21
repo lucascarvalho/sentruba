@@ -5,13 +5,12 @@
     "node": true,
   },
   "extends": ["eslint:all", "plugin:react/all", "plugin:jest/recommended"],
-  "parser": "babel-eslint",
   "plugins": [
     "jest",
     "react"
   ],
   "parserOptions": {
-    "ecmaVersion": 6,
+    "ecmaVersion": 2018,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
